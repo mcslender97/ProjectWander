@@ -20,7 +20,11 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class    Register extends AppCompatActivity {
+    public static final String GENERIC_USER_IMAGE = "https://icon-library.net/images/default-profile-icon/default-profile-icon-5.jpg";
     private Button myRegiser;
     private EditText myEmail, myPassword, myName;
 
@@ -82,8 +86,16 @@ public class    Register extends AppCompatActivity {
                             Toast.makeText(Register.this, "Sign up error", Toast.LENGTH_SHORT);
                         }else{
                             String userId = myAuth.getCurrentUser().getUid();
-                            DatabaseReference currentUserDb = FirebaseDatabase.getInstance().getReference().child("Users").child(radioButton.getText().toString()).child(userId).child("name");
-                            currentUserDb.setValue(name);
+                            DatabaseReference currentUserDb = FirebaseDatabase.getInstance().getReference().child("Users").child(radioButton.getText().toString()).child(userId);
+                            Map userInfo = new HashMap<>();
+                            userInfo.put("name", name);
+
+                            userInfo.put("profileImageUrl", GENERIC_USER_IMAGE);
+                            //userInfo.put("profileImageUrl", "default");
+
+
+
+                            currentUserDb.updateChildren(userInfo);
                         }
                     }
                 });

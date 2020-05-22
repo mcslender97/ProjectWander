@@ -12,8 +12,8 @@ public class cards {
         this.userId = userId;
         this.name=name;
         this.profileImageUrl = profileImageUrl;
-
     }
+
     public String getUserId() {
         return userId;
     }

@@ -62,6 +62,9 @@ public class Login extends AppCompatActivity {
                         if(!task.isSuccessful()){//Shows error if login failed
                             Toast.makeText(Login.this, "Sign in error", Toast.LENGTH_SHORT).show();
                         }
+                        if(task.isSuccessful()){//show welcome message
+                            Toast.makeText(Login.this, "Login successful", Toast.LENGTH_SHORT).show();
+                        }
                     }
                 });
             }
