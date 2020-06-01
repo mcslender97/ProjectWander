@@ -37,7 +37,7 @@ public class Login extends AppCompatActivity {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 //get current user info to see whether login or logout
-                final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                final FirebaseUser user = firebaseAuth.getInstance().getCurrentUser();
                 if (user != null){
                     Intent intent = new Intent(Login.this, MainActivity.class);
                     startActivity(intent);
@@ -60,13 +60,20 @@ public class Login extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(!task.isSuccessful()){//Shows error if login failed
-                            Toast.makeText(Login.this, "Sign in error", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Login.this, "Sign in error "+ task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
-                        if(task.isSuccessful()){//show welcome message
+
+                        //show welcome message
+                        if(task.isSuccessful()){
                             Toast.makeText(Login.this, "Login successful", Toast.LENGTH_SHORT).show();
+
+
                         }
+
+
                     }
                 });
+
             }
         });
     }

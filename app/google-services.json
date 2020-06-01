@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "846582479558",
-    "firebase_url": "https://projectwander-3f8bd.firebaseio.com",
-    "project_id": "projectwander-3f8bd",
-    "storage_bucket": "projectwander-3f8bd.appspot.com"
+    "project_number": "214059242983",
+    "firebase_url": "https://wanderapp-d0cbf.firebaseio.com",
+    "project_id": "wanderapp-d0cbf",
+    "storage_bucket": "wanderapp-d0cbf.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:846582479558:android:3871fcf6741d92a9",
+        "mobilesdk_app_id": "1:214059242983:android:856e6f7128737c44ab9942",
         "android_client_info": {
           "package_name": "com.mcslender.wander"
         }
       },
       "oauth_client": [
         {
-          "client_id": "846582479558-7371bp1biqqqfsgm4m44gnov31bfgp8i.apps.googleusercontent.com",
+          "client_id": "214059242983-0cu5dapruk7vsmuins8e25vsedmorpoe.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.mcslender.wander",
@@ -23,20 +23,20 @@
           }
         },
         {
-          "client_id": "846582479558-134u5ge0v8ep5jekpeparrseo1287g8v.apps.googleusercontent.com",
+          "client_id": "214059242983-etniplmi9m9csn7v9s0vcdl1q9355bao.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCWXNeAe4M5rYMo3aUR3IRNkEdvPW0V6Fg"
+          "current_key": "AIzaSyDjnyfetmhDthvcLs8GCeLI5W2-jrSD7Qo"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "846582479558-134u5ge0v8ep5jekpeparrseo1287g8v.apps.googleusercontent.com",
+              "client_id": "214059242983-etniplmi9m9csn7v9s0vcdl1q9355bao.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
